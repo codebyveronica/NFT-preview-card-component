@@ -42,22 +42,63 @@ main {
     transform: translate(-50%, -50%);
 }
 
-article {
-
+.container {
+    position: relative;
+    width: 100%;
 }
 
-img {
+.image {
+    display: block;
     height: 275px;
     width: 275px;
     border-radius: 7px;
 }
 
-img:hover {
-    content: url(../images/icon-view.svg);
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: #00fff781;
+    border-radius: 7px;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    color: white;
+    text-align: center;
+
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
 
 h1 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -120,5 +161,6 @@ img.author {
 
 p.author {
     display: inline;
+    font-size: 14px;
     padding-left: 10px;
 }
